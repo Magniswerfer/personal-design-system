@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;700&family=Source+Serif+4:opsz,wght@8..60,400&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0}
+html,body{width:1440px;height:900px;overflow:hidden;background:#fafaf8;color:#0b0b0c;font-family:"Familjen Grotesk",sans-serif}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:0 20px;padding:0 40px}
+header{height:60px;align-items:center;border-bottom:1px solid #0b0b0c}
+header b{grid-column:span 3;font-size:15px}
+header nav{grid-column:4/13;display:flex;gap:32px;font-size:14px}
+header nav a.on{color:#1c2340;text-decoration:underline;text-underline-offset:6px}
+.hero{padding-top:40px;height:330px}
+.hero .no{grid-column:span 2;font-size:13px;padding-top:24px}
+.hero h1{grid-column:3/13;font-size:200px;line-height:.84;letter-spacing:-.05em;font-weight:700;color:#1c2340}
+.lad{grid-column:1/5;border-top:1px solid #0b0b0c;padding-top:12px}
+.lad div{display:flex;align-items:baseline;gap:16px;border-bottom:1px solid #d9dbe2;padding:6px 0}
+.lad span{font-family:"JetBrains Mono";font-size:11px;width:60px;color:#555}
+.read{grid-column:5/10;border-top:1px solid #0b0b0c;padding-top:12px}
+.read h2{font-size:28px;font-weight:500;margin-bottom:12px}
+.read p{font-family:"Source Serif 4";font-size:17px;line-height:1.6;max-width:66ch}
+.side{grid-column:10/13;border-top:1px solid #0b0b0c;padding-top:12px;font-size:14px;line-height:1.9}
+</style></head><body>
+<header class="grid"><b>Magnus Design System</b><nav><a>Principles</a><a class="on">Type</a><a>Colour</a><a>Components</a><a>MCP</a></nav></header>
+<section class="grid hero"><div class="no">02 / 07</div><h1>Type</h1></section>
+<section class="grid">
+<div class="lad"><div><span>display</span><b style="font-size:56px;letter-spacing:-.03em">Aa</b></div><div><span>h1</span><b style="font-size:34px">Heading</b></div><div><span>h2</span><b style="font-size:24px;font-weight:500">Heading two</b></div><div><span>body</span><span style="font-family:'Source Serif 4';font-size:17px;width:auto;color:#0b0b0c">Reading text 17/27</span></div><div><span>label</span><span style="font-size:12px;width:auto;color:#0b0b0c;text-transform:uppercase;letter-spacing:.06em">Label</span></div></div>
+<div class="read"><h2>Two voices</h2><p>A grotesk carries structure: headings, navigation, labels and numbers. A serif carries reading. They never swap jobs, and neither is ever set in italic for emphasis alone.</p></div>
+<div class="side">On this page<br>Faces<br>Scale<br>Measure<br>Numerals</div>
+</section></body></html>

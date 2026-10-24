@@ -1,0 +1,665 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-24T08:00:41.141Z",
+  "title": "Design System: Magnus Design System",
+  "extensions": {
+    "source": {
+      "tokens": "src/tokens/tokens.json",
+      "css": [
+        "src/css/base.css",
+        "src/css/components.css"
+      ],
+      "varPrefix": "--ds-",
+      "themes": "light default; dark via prefers-color-scheme unless :root[data-theme] overrides"
+    },
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Specimen Paper",
+        "canonical": "#fbfbfa",
+        "cssVar": "--ds-paper",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0.001 0)",
+          "oklch(37% 0.001 0)",
+          "oklch(48% 0.001 0)",
+          "oklch(59% 0.001 0)",
+          "oklch(70% 0.001 0)",
+          "oklch(82% 0.001 0)",
+          "oklch(95% 0 0)"
+        ],
+        "dark": "#111112"
+      },
+      "paper-sunken": {
+        "role": "neutral",
+        "displayName": "Sunken Paper",
+        "canonical": "#f0f0ed",
+        "cssVar": "--ds-paper-sunken",
+        "tonalRamp": [
+          "oklch(15% 0.001 0)",
+          "oklch(26% 0.002 0)",
+          "oklch(37% 0.003 106.5)",
+          "oklch(48% 0.004 106.5)",
+          "oklch(59% 0.004 106.5)",
+          "oklch(70% 0.003 106.5)",
+          "oklch(82% 0.002 0)",
+          "oklch(95% 0.001 0)"
+        ],
+        "dark": "#1a1a1c"
+      },
+      "paper-raised": {
+        "role": "neutral",
+        "displayName": "Raised White",
+        "canonical": "#ffffff",
+        "cssVar": "--ds-paper-raised",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(37% 0 0)",
+          "oklch(48% 0 0)",
+          "oklch(59% 0 0)",
+          "oklch(70% 0 0)",
+          "oklch(82% 0 0)",
+          "oklch(95% 0 0)"
+        ],
+        "dark": "#202023"
+      },
+      "ink": {
+        "role": "primary",
+        "displayName": "Specimen Black",
+        "canonical": "#0b0b0c",
+        "cssVar": "--ds-ink",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0.001 0)",
+          "oklch(37% 0.001 0)",
+          "oklch(48% 0.002 286.1)",
+          "oklch(59% 0.002 286.1)",
+          "oklch(70% 0.002 0)",
+          "oklch(82% 0.001 0)",
+          "oklch(95% 0 0)"
+        ],
+        "dark": "#f2f2ef"
+      },
+      "ink-muted": {
+        "role": "neutral",
+        "displayName": "Muted Ink",
+        "canonical": "#4a4a4f",
+        "cssVar": "--ds-ink-muted",
+        "tonalRamp": [
+          "oklch(15% 0.001 0)",
+          "oklch(26% 0.003 286)",
+          "oklch(37% 0.006 286)",
+          "oklch(48% 0.008 286)",
+          "oklch(59% 0.008 286)",
+          "oklch(70% 0.006 286)",
+          "oklch(82% 0.004 286)",
+          "oklch(95% 0.001 0)"
+        ],
+        "dark": "#b4b4b0"
+      },
+      "ink-faint": {
+        "role": "neutral",
+        "displayName": "Faint Ink",
+        "canonical": "#6b6b70",
+        "cssVar": "--ds-ink-faint",
+        "tonalRamp": [
+          "oklch(15% 0.001 0)",
+          "oklch(26% 0.003 286.1)",
+          "oklch(37% 0.005 286.1)",
+          "oklch(48% 0.007 286.1)",
+          "oklch(59% 0.008 286.1)",
+          "oklch(70% 0.006 286.1)",
+          "oklch(82% 0.003 286.1)",
+          "oklch(95% 0.001 0)"
+        ],
+        "dark": "#8e8e8a"
+      },
+      "ink-inverse": {
+        "role": "neutral",
+        "displayName": "Ink Inverse",
+        "canonical": "#fbfbfa",
+        "cssVar": "--ds-ink-inverse",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0.001 0)",
+          "oklch(37% 0.001 0)",
+          "oklch(48% 0.001 0)",
+          "oklch(59% 0.001 0)",
+          "oklch(70% 0.001 0)",
+          "oklch(82% 0.001 0)",
+          "oklch(95% 0 0)"
+        ],
+        "dark": "#111112"
+      },
+      "rule-strong": {
+        "role": "neutral",
+        "displayName": "Strong Rule",
+        "canonical": "#0b0b0c",
+        "cssVar": "--ds-rule-strong",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0.001 0)",
+          "oklch(37% 0.001 0)",
+          "oklch(48% 0.002 286.1)",
+          "oklch(59% 0.002 286.1)",
+          "oklch(70% 0.002 0)",
+          "oklch(82% 0.001 0)",
+          "oklch(95% 0 0)"
+        ],
+        "dark": "#f2f2ef"
+      },
+      "rule-soft": {
+        "role": "neutral",
+        "displayName": "Soft Rule",
+        "canonical": "#dcdcd7",
+        "cssVar": "--ds-rule-soft",
+        "tonalRamp": [
+          "oklch(15% 0.001 0)",
+          "oklch(26% 0.003 106.5)",
+          "oklch(37% 0.005 106.5)",
+          "oklch(48% 0.006 106.5)",
+          "oklch(59% 0.007 106.5)",
+          "oklch(70% 0.005 106.5)",
+          "oklch(82% 0.003 106.5)",
+          "oklch(95% 0.001 0)"
+        ],
+        "dark": "#323235"
+      },
+      "section-oxide": {
+        "role": "secondary",
+        "displayName": "Oxide",
+        "canonical": "#d1612f",
+        "cssVar": "--ds-section-oxide",
+        "tonalRamp": [
+          "oklch(15% 0.023 42.6)",
+          "oklch(26% 0.062 42.6)",
+          "oklch(37% 0.105 42.6)",
+          "oklch(48% 0.147 42.6)",
+          "oklch(59% 0.155 42.6)",
+          "oklch(70% 0.116 42.6)",
+          "oklch(82% 0.07 42.6)",
+          "oklch(95% 0.023 42.6)"
+        ],
+        "on": "#0b0b0c",
+        "onVar": "--ds-section-oxide-on"
+      },
+      "section-chrome": {
+        "role": "secondary",
+        "displayName": "Chrome Yellow",
+        "canonical": "#e3b72b",
+        "cssVar": "--ds-section-chrome",
+        "tonalRamp": [
+          "oklch(15% 0.023 89.7)",
+          "oklch(26% 0.061 89.7)",
+          "oklch(37% 0.103 89.7)",
+          "oklch(48% 0.145 89.7)",
+          "oklch(59% 0.152 89.7)",
+          "oklch(70% 0.114 89.7)",
+          "oklch(82% 0.068 89.7)",
+          "oklch(95% 0.023 89.7)"
+        ],
+        "on": "#0b0b0c",
+        "onVar": "--ds-section-chrome-on"
+      },
+      "section-grass": {
+        "role": "secondary",
+        "displayName": "Grass",
+        "canonical": "#5f9a4a",
+        "cssVar": "--ds-section-grass",
+        "tonalRamp": [
+          "oklch(15% 0.019 138.1)",
+          "oklch(26% 0.051 138.1)",
+          "oklch(37% 0.087 138.1)",
+          "oklch(48% 0.122 138.1)",
+          "oklch(59% 0.128 138.1)",
+          "oklch(70% 0.096 138.1)",
+          "oklch(82% 0.058 138.1)",
+          "oklch(95% 0.019 138.1)"
+        ],
+        "on": "#0b0b0c",
+        "onVar": "--ds-section-grass-on"
+      },
+      "section-teal": {
+        "role": "secondary",
+        "displayName": "Teal",
+        "canonical": "#2f7f7a",
+        "cssVar": "--ds-section-teal",
+        "tonalRamp": [
+          "oklch(15% 0.012 189.4)",
+          "oklch(26% 0.031 189.4)",
+          "oklch(37% 0.052 189.4)",
+          "oklch(48% 0.073 189.4)",
+          "oklch(59% 0.077 189.4)",
+          "oklch(70% 0.058 189.4)",
+          "oklch(82% 0.035 189.4)",
+          "oklch(95% 0.012 189.4)"
+        ],
+        "on": "#fbfbfa",
+        "onVar": "--ds-section-teal-on"
+      },
+      "section-ultramarine": {
+        "role": "secondary",
+        "displayName": "Ultramarine",
+        "canonical": "#2c3f9e",
+        "cssVar": "--ds-section-ultramarine",
+        "tonalRamp": [
+          "oklch(15% 0.023 269.6)",
+          "oklch(26% 0.062 269.6)",
+          "oklch(37% 0.105 269.6)",
+          "oklch(48% 0.148 269.6)",
+          "oklch(59% 0.155 269.6)",
+          "oklch(70% 0.117 269.6)",
+          "oklch(82% 0.07 269.6)",
+          "oklch(95% 0.023 269.6)"
+        ],
+        "on": "#fbfbfa",
+        "onVar": "--ds-section-ultramarine-on"
+      },
+      "section-violet": {
+        "role": "secondary",
+        "displayName": "Violet",
+        "canonical": "#6e4aa0",
+        "cssVar": "--ds-section-violet",
+        "tonalRamp": [
+          "oklch(15% 0.02 300.8)",
+          "oklch(26% 0.054 300.8)",
+          "oklch(37% 0.092 300.8)",
+          "oklch(48% 0.129 300.8)",
+          "oklch(59% 0.136 300.8)",
+          "oklch(70% 0.102 300.8)",
+          "oklch(82% 0.061 300.8)",
+          "oklch(95% 0.02 300.8)"
+        ],
+        "on": "#fbfbfa",
+        "onVar": "--ds-section-violet-on"
+      },
+      "section-sienna": {
+        "role": "secondary",
+        "displayName": "Sienna",
+        "canonical": "#8a5a3b",
+        "cssVar": "--ds-section-sienna",
+        "tonalRamp": [
+          "oklch(15% 0.012 53)",
+          "oklch(26% 0.031 53)",
+          "oklch(37% 0.052 53)",
+          "oklch(48% 0.074 53)",
+          "oklch(59% 0.078 53)",
+          "oklch(70% 0.058 53)",
+          "oklch(82% 0.035 53)",
+          "oklch(95% 0.012 53)"
+        ],
+        "on": "#fbfbfa",
+        "onVar": "--ds-section-sienna-on"
+      },
+      "signal-error": {
+        "role": "tertiary",
+        "displayName": "Vermilion Error",
+        "canonical": "#b42318",
+        "cssVar": "--ds-signal-error",
+        "tonalRamp": [
+          "oklch(15% 0.027 29.5)",
+          "oklch(26% 0.073 29.5)",
+          "oklch(37% 0.123 29.5)",
+          "oklch(48% 0.173 29.5)",
+          "oklch(59% 0.182 29.5)",
+          "oklch(70% 0.137 29.5)",
+          "oklch(82% 0.082 29.5)",
+          "oklch(95% 0.027 29.5)"
+        ],
+        "dark": "#f0715f"
+      },
+      "signal-success": {
+        "role": "tertiary",
+        "displayName": "Moss Success",
+        "canonical": "#3d6e2c",
+        "cssVar": "--ds-signal-success",
+        "tonalRamp": [
+          "oklch(15% 0.017 138.4)",
+          "oklch(26% 0.044 138.4)",
+          "oklch(37% 0.075 138.4)",
+          "oklch(48% 0.105 138.4)",
+          "oklch(59% 0.111 138.4)",
+          "oklch(70% 0.083 138.4)",
+          "oklch(82% 0.05 138.4)",
+          "oklch(95% 0.017 138.4)"
+        ],
+        "dark": "#8cc576"
+      },
+      "signal-warning": {
+        "role": "tertiary",
+        "displayName": "Ochre Warning",
+        "canonical": "#7a5a00",
+        "cssVar": "--ds-signal-warning",
+        "tonalRamp": [
+          "oklch(15% 0.015 84.4)",
+          "oklch(26% 0.04 84.4)",
+          "oklch(37% 0.068 84.4)",
+          "oklch(48% 0.095 84.4)",
+          "oklch(59% 0.1 84.4)",
+          "oklch(70% 0.075 84.4)",
+          "oklch(82% 0.045 84.4)",
+          "oklch(95% 0.015 84.4)"
+        ],
+        "dark": "#e3b72b"
+      },
+      "signal-focus": {
+        "role": "tertiary",
+        "displayName": "Focus Ultramarine",
+        "canonical": "#2c3f9e",
+        "cssVar": "--ds-signal-focus",
+        "tonalRamp": [
+          "oklch(15% 0.023 269.6)",
+          "oklch(26% 0.062 269.6)",
+          "oklch(37% 0.105 269.6)",
+          "oklch(48% 0.148 269.6)",
+          "oklch(59% 0.155 269.6)",
+          "oklch(70% 0.117 269.6)",
+          "oklch(82% 0.07 269.6)",
+          "oklch(95% 0.023 269.6)"
+        ],
+        "dark": "#9fb0f5"
+      }
+    },
+    "typographyMeta": {
+      "monument": {
+        "displayName": "Monument",
+        "purpose": "One word per page, in the band. Never a sentence.",
+        "cssVar": "--ds-text-monument"
+      },
+      "display": {
+        "displayName": "Display",
+        "purpose": "Stat figures, tabular lining numerals.",
+        "cssVar": "--ds-text-display"
+      },
+      "headline": {
+        "displayName": "Headline (h1)",
+        "purpose": "Page-level h1 outside the band.",
+        "cssVar": "--ds-text-h1"
+      },
+      "title": {
+        "displayName": "Title (h2)",
+        "purpose": "Sheet headings under the 2px rule.",
+        "cssVar": "--ds-text-h2"
+      },
+      "subtitle": {
+        "displayName": "Subtitle (h3)",
+        "purpose": "h3, large button text.",
+        "cssVar": "--ds-text-h3"
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Intro paragraphs and blockquotes in the serif; band summary in the grotesk.",
+        "cssVar": "--ds-text-lead"
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text in .ds-prose, 66ch measure.",
+        "cssVar": "--ds-text-body"
+      },
+      "ui": {
+        "displayName": "UI",
+        "purpose": "Controls, navigation, table cells.",
+        "cssVar": "--ds-text-ui"
+      },
+      "small": {
+        "displayName": "Small",
+        "purpose": "Help, captions, metadata, code heads.",
+        "cssVar": "--ds-text-small"
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Uppercase table heads, tags, list headings.",
+        "cssVar": "--ds-text-label"
+      },
+      "mono": {
+        "displayName": "Mono",
+        "purpose": "Code, token values, measurements, deltas. Never running text.",
+        "cssVar": "--ds-font-mono"
+      }
+    },
+    "borders": [
+      {
+        "name": "hairline",
+        "value": "1px",
+        "cssVar": "--ds-border-hairline",
+        "purpose": "Divides: rows, frames, plates, fields."
+      },
+      {
+        "name": "control-stroke",
+        "value": "1.5px",
+        "cssVar": null,
+        "purpose": "Outlines buttons, checkboxes, radios and the switch track (literal in components.css, not tokenised)."
+      },
+      {
+        "name": "rule",
+        "value": "2px",
+        "cssVar": "--ds-border-rule",
+        "purpose": "Opens a section; marks current and selected."
+      },
+      {
+        "name": "ink-rule",
+        "value": "4px",
+        "cssVar": null,
+        "purpose": "Section ink under the masthead; error callout top rule (literal, not tokenised)."
+      }
+    ],
+    "grid": {
+      "columns": 12,
+      "gutter": "1.25rem",
+      "margin": "clamp(1rem, 3vw, 2.5rem)",
+      "max": "90rem",
+      "measure": "66ch"
+    },
+    "shadows": [
+      {
+        "name": "input-baseline",
+        "value": "inset 0 -1px 0 var(--ds-ink)",
+        "purpose": "Resting underline inside inputs, selects, textareas."
+      },
+      {
+        "name": "input-baseline-active",
+        "value": "inset 0 -2px 0 var(--ds-ink)",
+        "purpose": "Field hover and focus-visible."
+      },
+      {
+        "name": "row-selected",
+        "value": "inset 0 -2px 0 var(--ds-ink), inset 0 2px 0 var(--ds-ink)",
+        "purpose": "Selected table row, ruled instead of tinted."
+      }
+    ],
+    "focus": {
+      "value": "outline: 2px solid var(--ds-signal-focus); outline-offset: 2px",
+      "purpose": "Global focus-visible; fields use offset 0."
+    },
+    "motion": [
+      {
+        "name": "duration-quick",
+        "value": "120ms",
+        "purpose": "Hover, press."
+      },
+      {
+        "name": "duration-standard",
+        "value": "220ms",
+        "purpose": "Toggles, tabs, disclosure."
+      },
+      {
+        "name": "duration-slow",
+        "value": "640ms",
+        "purpose": "The band setting in; the one authored moment."
+      },
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Default exponential ease-out."
+      },
+      {
+        "name": "ease-in-out",
+        "value": "cubic-bezier(0.55, 0.01, 0, 1)",
+        "purpose": "Busy indicator loop."
+      },
+      {
+        "name": "band-set",
+        "value": "clip-path inset(0 0 100% 0) -> inset(0); word: translateY(0.18em) blur(6px) opacity 0.4 -> none, 80ms delay",
+        "purpose": "Entrance for .ds-band[data-animate]; disabled under reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "40rem",
+        "purpose": "Masthead nav wraps to a scrolling row; band stacks."
+      },
+      {
+        "name": "lg",
+        "value": "64rem",
+        "purpose": "Band word and summary start at column 3."
+      }
+    ],
+    "dataPalette": [
+      "section-oxide",
+      "section-chrome",
+      "section-grass",
+      "section-teal",
+      "section-ultramarine",
+      "section-violet",
+      "section-sienna"
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The single main action in a view: filled ink, square.",
+      "html": "<button class=\"ds-button\" data-variant=\"primary\">Save note</button>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:2.75rem;padding:0 1.5rem;font-family:var(--ds-font-grotesk,\"Familjen Grotesk\",\"Helvetica Neue\",Arial,sans-serif);font-size:.9375rem;font-weight:500;line-height:1;text-decoration:none;color:var(--ds-ink,#0b0b0c);background:transparent;border:1.5px solid var(--ds-ink,#0b0b0c);border-radius:0;transition:background-color 120ms cubic-bezier(.16,1,.3,1),color 120ms cubic-bezier(.16,1,.3,1),transform 120ms cubic-bezier(.16,1,.3,1)}.ds-button:hover{background:var(--ds-paper-sunken,#f0f0ed)}.ds-button:active{transform:translateY(1px)}.ds-button:focus-visible{outline:2px solid var(--ds-signal-focus,#2c3f9e);outline-offset:2px}.ds-button[data-variant=\"primary\"]{background:var(--ds-ink,#0b0b0c);color:var(--ds-ink-inverse,#fbfbfa)}.ds-button[data-variant=\"primary\"]:hover{background:var(--ds-ink-muted,#4a4a4f);border-color:var(--ds-ink-muted,#4a4a4f)}"
+    },
+    {
+      "name": "Default Button",
+      "kind": "button",
+      "refersTo": "button",
+      "description": "Secondary actions: 1.5px ink outline, sunken fill on hover; disabled is dashed.",
+      "html": "<div style=\"display:flex;gap:12px\"><button class=\"ds-button\">Export</button><button class=\"ds-button\" disabled>Archived</button></div>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:2.75rem;padding:0 1.5rem;font-family:var(--ds-font-grotesk,\"Familjen Grotesk\",\"Helvetica Neue\",Arial,sans-serif);font-size:.9375rem;font-weight:500;line-height:1;text-decoration:none;color:var(--ds-ink,#0b0b0c);background:transparent;border:1.5px solid var(--ds-ink,#0b0b0c);border-radius:0;transition:background-color 120ms cubic-bezier(.16,1,.3,1),color 120ms cubic-bezier(.16,1,.3,1),transform 120ms cubic-bezier(.16,1,.3,1)}.ds-button:hover{background:var(--ds-paper-sunken,#f0f0ed)}.ds-button:active{transform:translateY(1px)}.ds-button:focus-visible{outline:2px solid var(--ds-signal-focus,#2c3f9e);outline-offset:2px}.ds-button:disabled{cursor:not-allowed;background:transparent;color:var(--ds-ink-faint,#6b6b70);border-style:dashed;border-color:var(--ds-ink-faint,#6b6b70);transform:none}"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Low-weight action in dense UI: borderless, underlined.",
+      "html": "<button class=\"ds-button\" data-variant=\"ghost\">Cancel</button>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:2.75rem;padding:0 1.5rem;font-family:var(--ds-font-grotesk,\"Familjen Grotesk\",\"Helvetica Neue\",Arial,sans-serif);font-size:.9375rem;font-weight:500;line-height:1;text-decoration:none;color:var(--ds-ink,#0b0b0c);background:transparent;border:1.5px solid var(--ds-ink,#0b0b0c);border-radius:0;transition:background-color 120ms cubic-bezier(.16,1,.3,1),color 120ms cubic-bezier(.16,1,.3,1),transform 120ms cubic-bezier(.16,1,.3,1)}.ds-button:hover{background:var(--ds-paper-sunken,#f0f0ed)}.ds-button:active{transform:translateY(1px)}.ds-button:focus-visible{outline:2px solid var(--ds-signal-focus,#2c3f9e);outline-offset:2px}.ds-button[data-variant=\"ghost\"]{border-color:transparent;padding-inline:.75rem;text-decoration:underline;text-underline-offset:.25em}.ds-button[data-variant=\"ghost\"]:hover{background:transparent;text-decoration-thickness:2px}"
+    },
+    {
+      "name": "Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Label, square input with an inset ink baseline, help text.",
+      "html": "<div class=\"ds-field\"><label class=\"ds-field__label\" for=\"ds-f1\">Project name</label><input class=\"ds-input\" id=\"ds-f1\" placeholder=\"Garden\"><p class=\"ds-field__help\">Shown in the masthead.</p></div>",
+      "css": ".ds-field{display:grid;gap:.5rem;max-width:32rem;font-family:var(--ds-font-grotesk,\"Familjen Grotesk\",\"Helvetica Neue\",Arial,sans-serif);}.ds-field__label{font-size:.9375rem;font-weight:500}.ds-field__help{margin:0;font-size:.8125rem;color:var(--ds-ink-muted,#4a4a4f)}.ds-input{width:100%;min-height:2.75rem;padding:.5rem .75rem;font:inherit;font-size:.9375rem;background:var(--ds-paper-raised,#fff);color:var(--ds-ink,#0b0b0c);border:1px solid var(--ds-ink,#0b0b0c);border-radius:0;box-shadow:inset 0 -1px 0 var(--ds-ink,#0b0b0c);transition:box-shadow 120ms cubic-bezier(.16,1,.3,1)}.ds-input::placeholder{color:var(--ds-ink-faint,#6b6b70)}.ds-input:hover{box-shadow:inset 0 -2px 0 var(--ds-ink,#0b0b0c)}.ds-input:focus-visible{outline:2px solid var(--ds-signal-focus,#2c3f9e);outline-offset:0;box-shadow:inset 0 -2px 0 var(--ds-ink,#0b0b0c)}"
+    },
+    {
+      "name": "Masthead",
+      "kind": "nav",
+      "refersTo": "masthead",
+      "description": "Wordmark, section nav with a 2px current rule, closed by a 4px section-ink rule.",
+      "html": "<header class=\"ds-masthead\"><div class=\"ds-masthead__inner\"><a class=\"ds-masthead__mark\" href=\"#\">Magnus Design System</a><nav class=\"ds-masthead__nav\"><a href=\"#\" aria-current=\"page\">Overview</a><a href=\"#\">Colour</a><a href=\"#\">Type</a><a href=\"#\">Space</a></nav></div></header>",
+      "css": ".ds-masthead{background:var(--ds-paper,#fbfbfa);border-bottom:4px solid var(--ds-section-ultramarine,#2c3f9e);font-family:var(--ds-font-grotesk,\"Familjen Grotesk\",\"Helvetica Neue\",Arial,sans-serif);}.ds-masthead__inner{display:flex;align-items:center;gap:2rem;min-height:3.75rem;padding-inline:1.5rem}.ds-masthead__mark{font-weight:700;font-size:.9375rem;text-decoration:none;color:var(--ds-ink,#0b0b0c);white-space:nowrap}.ds-masthead__nav{display:flex;gap:1.5rem}.ds-masthead__nav a{font-size:.9375rem;text-decoration:none;color:var(--ds-ink-muted,#4a4a4f);padding-block:.5rem;border-bottom:2px solid transparent;transition:color 120ms cubic-bezier(.16,1,.3,1),border-color 120ms cubic-bezier(.16,1,.3,1)}.ds-masthead__nav a:hover{color:var(--ds-ink,#0b0b0c)}.ds-masthead__nav a[aria-current=\"page\"]{color:var(--ds-ink,#0b0b0c);border-bottom-color:var(--ds-ink,#0b0b0c)}.ds-masthead__nav a:focus-visible{outline:2px solid var(--ds-signal-focus,#2c3f9e);outline-offset:2px}"
+    },
+    {
+      "name": "Band",
+      "kind": "custom",
+      "refersTo": "band",
+      "description": "Signature section opener: a full field of the section ink with one monumental word.",
+      "html": "<section class=\"ds-band\"><div class=\"ds-band__inner\"><h1 class=\"ds-band__word\">System</h1><p class=\"ds-band__summary\">One sheet, one ink per section.</p></div></section>",
+      "css": ".ds-band{background:var(--ds-section-ultramarine,#2c3f9e);color:var(--ds-section-ultramarine-on,#fbfbfa);overflow:hidden;font-family:var(--ds-font-grotesk,\"Familjen Grotesk\",\"Helvetica Neue\",Arial,sans-serif);animation:ds-band-set 640ms cubic-bezier(.16,1,.3,1) both}.ds-band__inner{display:grid;align-content:end;min-height:16rem;padding:3rem 1.5rem 2rem}.ds-band__word{margin:0;font-size:clamp(4.5rem,15vw,9rem);font-weight:700;line-height:.86;letter-spacing:-.04em;margin-left:-.05em}.ds-band__summary{margin:2rem 0 0;font-size:1.25rem;line-height:1.35;max-width:40ch}@keyframes ds-band-set{from{clip-path:inset(0 0 100% 0)}to{clip-path:inset(0 0 0 0)}}@media (prefers-reduced-motion:reduce){.ds-band{animation:none}}"
+    },
+    {
+      "name": "Tags",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "Uppercase square labels: outlined status, solid, or filled with a section ink.",
+      "html": "<div style=\"display:flex;gap:8px\"><span class=\"ds-tag\">Draft</span><span class=\"ds-tag ds-tag--solid\">Live</span><span class=\"ds-tag ds-tag--teal\">Tools</span></div>",
+      "css": ".ds-tag{display:inline-flex;align-items:center;min-height:1.5rem;padding:0 .5rem;font-family:var(--ds-font-grotesk,\"Familjen Grotesk\",\"Helvetica Neue\",Arial,sans-serif);font-size:.75rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;border:1px solid currentColor;color:var(--ds-ink,#0b0b0c);white-space:nowrap}.ds-tag--solid{background:var(--ds-ink,#0b0b0c);color:var(--ds-ink-inverse,#fbfbfa);border-color:var(--ds-ink,#0b0b0c)}.ds-tag--teal{background:var(--ds-section-teal,#2f7f7a);color:var(--ds-section-teal-on,#fbfbfa);border-color:var(--ds-section-teal,#2f7f7a)}"
+    },
+    {
+      "name": "Callout",
+      "kind": "card",
+      "refersTo": "callout",
+      "description": "Aside in reading: sunken field, top rule; tone changes the rule's form.",
+      "html": "<aside class=\"ds-callout\"><p class=\"ds-callout__title\">Note</p><p class=\"ds-callout__body\">Section inks are laid as fields, never as accents.</p></aside><aside class=\"ds-callout ds-callout--error\" style=\"margin-top:16px\"><p class=\"ds-callout__title\">Error</p><p class=\"ds-callout__body\">The token file failed to parse. Check line 12.</p></aside>",
+      "css": ".ds-callout{display:grid;gap:.5rem;padding:1rem 1.5rem 1.5rem;border-top:2px solid var(--ds-ink,#0b0b0c);background:var(--ds-paper-sunken,#f0f0ed);max-width:66ch}.ds-callout p{margin:0}.ds-callout__title{font-family:var(--ds-font-grotesk,\"Familjen Grotesk\",\"Helvetica Neue\",Arial,sans-serif);font-size:.9375rem;font-weight:700}.ds-callout__body{font-family:var(--ds-font-serif,\"Source Serif 4\",Georgia,serif);font-size:1.0625rem;line-height:1.6}.ds-callout--error{border-top:4px solid var(--ds-signal-error,#b42318)}.ds-callout--error .ds-callout__title{color:var(--ds-signal-error,#b42318)}"
+    },
+    {
+      "name": "Table",
+      "kind": "custom",
+      "refersTo": "table",
+      "description": "Heavy head rule, hairline rows, tabular numerals, ruled selection.",
+      "html": "<table class=\"ds-table\"><thead><tr><th>Project</th><th data-align=\"end\">Hours</th></tr></thead><tbody><tr><td>Garden</td><td data-align=\"end\">42</td></tr><tr aria-selected=\"true\"><td>Notes</td><td data-align=\"end\">17</td></tr><tr><td>Slides</td><td data-align=\"end\">8</td></tr></tbody></table>",
+      "css": ".ds-table{width:100%;border-collapse:collapse;font-family:var(--ds-font-grotesk,\"Familjen Grotesk\",\"Helvetica Neue\",Arial,sans-serif);font-size:.9375rem;font-variant-numeric:tabular-nums lining-nums;color:var(--ds-ink,#0b0b0c)}.ds-table th{text-align:left;font-size:.75rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--ds-ink-muted,#4a4a4f);padding:.5rem .75rem;border-bottom:2px solid var(--ds-ink,#0b0b0c)}.ds-table td{padding:.75rem;border-bottom:1px solid var(--ds-rule-soft,#dcdcd7)}.ds-table th:first-child,.ds-table td:first-child{padding-left:0}.ds-table th:last-child,.ds-table td:last-child{padding-right:0}.ds-table [data-align=\"end\"]{text-align:right}.ds-table tbody tr{transition:background-color 120ms cubic-bezier(.16,1,.3,1)}.ds-table tbody tr:hover{background:var(--ds-paper-sunken,#f0f0ed)}.ds-table tbody tr[aria-selected=\"true\"]{box-shadow:inset 0 -2px 0 var(--ds-ink,#0b0b0c),inset 0 2px 0 var(--ds-ink,#0b0b0c)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Specimen Sheet, One Ink Per Section",
+    "overview": "Every surface is a sheet from a Swiss type specimen: near-white paper, black ink, a strict 12-column grid, 1px hairlines and square corners. Colour arrives only as a section ink, and when it arrives it fills a whole field: the opener band, a slide, a category tag, a chart series. A page announces itself with one monumental grotesk word set into that field, and everything beneath it drops to reading and interface sizes so the hierarchy is never in doubt.\n\nTwo voices divide the work. Familjen Grotesk carries structure (display, headings, navigation, labels, controls, numbers); Source Serif 4 carries reading; JetBrains Mono carries values and code and nothing else. Density is calm in reading and tight in operation: groups are close, sections are far apart. State is drawn in form, by rule weight, fill and dashed strokes, so every screen still reads in greyscale.\n\nThe system explicitly refuses the default docs look: a sidebar tree, Inter, a blue accent and rounded preview cards. It is flat, square and ruled; depth is a sunken field or an inset rule, never a lifted card.",
+    "keyCharacteristics": [
+      "Near-white paper and black ink; seven section inks laid as full fields, never as accents.",
+      "One monumental word per page, in the band, and no other oversized type.",
+      "Square corners everywhere except true circles and the radio dot.",
+      "Hairlines divide, the 2px rule opens and selects, the 4px rule carries the section ink under the masthead.",
+      "State reads without colour: dashed for disabled, the 2px rule for current and selected, a heavier border plus a sentence for errors.",
+      "One authored motion moment (the band setting in); everything else is a 120 to 220ms response."
+    ],
+    "rules": [
+      {
+        "name": "The Full Field Rule",
+        "body": "A section ink is laid as a field (band, slide, tag fill, chart series, data bar), never as text colour, link colour, border accent or sprinkled highlight. One ink per section or project.",
+        "section": "colors"
+      },
+      {
+        "name": "The Greyscale Test Rule",
+        "body": "Every state must read with colour removed. Colour may reinforce a state; it never carries it alone.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Word Rule",
+        "body": "Monument size is used once per page, for one word in the band. Nothing else on the page is set larger than a title.",
+        "section": "typography"
+      },
+      {
+        "name": "The Two Voices Rule",
+        "body": "Grotesk for structure, serif for reading, mono for values. Mono is never decoration and never running text.",
+        "section": "typography"
+      },
+      {
+        "name": "The Sheet Rule",
+        "body": "Content regions open on the 2px strong rule, not inside a box. Separation comes from the rule and the space, never from a card.",
+        "section": "layout"
+      },
+      {
+        "name": "The Inset-Only Rule",
+        "body": "A shadow is allowed only as an inset line that draws a rule. Anything that lifts a surface off the page is out.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do give each section or project one section ink and lay it as a full field (band, slide, tag fill, chart series).",
+      "Do use the section inks in their listed order as the categorical data palette: oxide, chrome, grass, teal, ultramarine, violet, sienna, and give chrome a 1px ink edge on paper.",
+      "Do open every page with one band holding one word at monument size, directly under the masthead.",
+      "Do keep running text in Source Serif 4 at 17px / 1.6 with a 66ch measure.",
+      "Do draw state in form: dashed strokes for disabled, the 2px rule for current and selected, a 2px vermilion border plus an \"Error:\" sentence for errors.",
+      "Do keep motion to 120ms for hover and press, 220ms for toggles and tabs, on exponential ease-out (cubic-bezier(0.16, 1, 0.3, 1))."
+    ],
+    "donts": [
+      "Don't round corners on anything but true circles and radio dots.",
+      "Don't lift surfaces with drop shadows; use sunken paper or an inset rule.",
+      "Don't use a section ink as text colour, link colour or an accent sprinkled across a page.",
+      "Don't let colour carry a state on its own, including coloured links without an underline.",
+      "Don't set more than one band per page, or put sentences or controls in the band.",
+      "Don't box content in nested cards; use a plate, a sunken field, or a sheet opened by the rule.",
+      "Don't use vermilion for anything but errors.",
+      "Don't ship the default docs look: a sidebar tree, Inter, a blue accent and rounded preview cards."
+    ]
+  }
+}

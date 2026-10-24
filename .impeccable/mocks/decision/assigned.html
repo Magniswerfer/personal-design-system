@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ground:#f3f1ec;--ink:#1c1b19;--ink-2:#5b5852;--rule:#d6d2c8;--mount:#3d4a6b;--on-mount:#f3f1ec;--sage:#9fb0a0;--ochre:#c7a35e}
+*{box-sizing:border-box;margin:0}
+html,body{width:1440px;height:900px;overflow:hidden;background:var(--ground);color:var(--ink);font-family:"Source Serif 4",serif}
+.g{font-family:"Familjen Grotesk",sans-serif}
+.m{font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:.02em}
+header{display:grid;grid-template-columns:200px 1fr auto;align-items:center;height:56px;padding:0 40px;border-bottom:1px solid var(--rule)}
+header .g{font-weight:700;font-size:15px}
+nav{display:flex;gap:28px;font-size:14px}
+nav a{color:var(--ink-2);text-decoration:none}nav a.on{color:var(--ink);border-bottom:2px solid var(--ink);padding-bottom:4px}
+.band{background:var(--mount);color:var(--on-mount);height:330px;padding:28px 40px 0 240px;position:relative}
+.band .acc{position:absolute;left:40px;top:32px;line-height:1.7;opacity:.75}
+.band .word{font-size:212px;line-height:.82;font-weight:700;letter-spacing:-.045em;margin-top:56px}
+.band .meta{position:absolute;right:40px;top:32px;text-align:right;line-height:1.7;opacity:.85}
+.body{display:grid;grid-template-columns:200px 680px 1fr;gap:0 40px;padding:44px 40px}
+.rail{border-right:1px solid var(--rule);padding-right:16px;line-height:2.1}
+.rail div{display:flex;justify-content:space-between;color:var(--ink-2)}
+.rail .on{color:var(--ink);font-weight:500}
+.rail .on::before{content:"";width:6px;height:6px;background:var(--ink);margin:9px 6px 0 -12px}
+h1{font-family:"Familjen Grotesk";font-size:34px;font-weight:500;letter-spacing:-.015em;line-height:1.1;margin-bottom:16px}
+p{font-size:17px;line-height:1.6;max-width:66ch;color:#2b2a27}
+.entry{border-top:2px solid var(--ink);margin-top:28px;padding-top:12px;display:grid;grid-template-columns:110px 1fr;row-gap:6px;font-size:15px}
+.entry dt{font-family:"JetBrains Mono";font-size:11px;text-transform:uppercase;color:var(--ink-2);padding-top:3px}
+.plate{border:1px solid var(--rule);background:#fbfaf7;height:300px;display:grid;grid-template-rows:1fr auto}
+.plate .obj{display:flex;align-items:center;justify-content:center;gap:14px}
+.btn{font-family:"Familjen Grotesk";font-size:15px;font-weight:500;padding:12px 20px;border:1.5px solid var(--ink)}
+.btn.p{background:var(--ink);color:var(--ground)}
+.cap{display:flex;justify-content:space-between;padding:10px 14px;border-top:1px solid var(--rule)}
+</style></head><body>
+<header><span class="g">Magnus / Register</span>
+<nav class="g"><a>Principles</a><a>Tokens</a><a class="on">Components</a><a>Patterns</a><a>Surfaces</a><a>MCP</a></nav>
+<span class="m">v0.1 · 2026</span></header>
+<section class="band g">
+<div class="acc m">SECTION III<br>C.001 — C.024<br>24 objects</div>
+<div class="meta m">Mount: Slate 700<br>Last accessioned 24.10.2026</div>
+<div class="word">Components</div>
+</section>
+<section class="body">
+<div class="rail m">
+<div><span>C.001</span><span>Button</span></div>
+<div><span>C.002</span><span>Link</span></div>
+<div class="on"><span>C.003</span><span>Field</span></div>
+<div><span>C.004</span><span>Select</span></div>
+<div><span>C.005</span><span>Table</span></div>
+<div><span>C.006</span><span>Callout</span></div>
+<div><span>C.007</span><span>Stat</span></div>
+</div>
+<div>
+<h1>C.001 Button</h1>
+<p>One action per surface earns the filled button. Everything else is outlined or set as a link. Buttons never round their corners and never carry colour as their only signal of state.</p>
+<dl class="entry"><dt>Object</dt><dd>Button, primary and secondary</dd><dt>Medium</dt><dd>HTML &lt;button&gt;, ds.css</dd><dt>Provenance</dt><dd>Site, tools, dashboards, slides</dd><dt>Condition</dt><dd>Rest, hover, focus, pressed, disabled</dd></dl>
+</div>
+<div class="plate"><div class="obj"><span class="btn p">Save entry</span><span class="btn">Cancel</span></div>
+<div class="cap m"><span>PLATE C.001a</span><span>rendered · source</span></div></div>
+</section>
+</body></html>

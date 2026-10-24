@@ -1,0 +1,18 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "personal-design-system",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-10-01",
+  // Served at https://personal-design-system.magnushoholt.workers.dev
+  "workers_dev": true,
+  // Regenerates dist/ (docs pages, ds.css, tokens) before every dev/deploy.
+  "build": { "command": "node scripts/build.mjs" },
+  "assets": {
+    "directory": "dist",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    // Only the MCP endpoint and API run code; everything else is static.
+    "run_worker_first": ["/mcp", "/api/*"]
+  },
+  "observability": { "enabled": true }
+}

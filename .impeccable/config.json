@@ -1,0 +1,89 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "inter",
+        "files": [
+          ".impeccable/mocks/decision/canon.html"
+        ],
+        "createdAt": "2026-10-24T07:28:15.458Z",
+        "reason": "agent: canon card deliberately depicts the category-standard docs look, Inter included"
+      },
+      {
+        "rule": "em-dash-overuse",
+        "value": "*",
+        "files": [
+          "dist/colour.html"
+        ],
+        "createdAt": "2026-10-24T07:49:12.219Z",
+        "reason": "agent: the dashes are CSS custom property names (--ds-*), not prose em-dashes"
+      },
+      {
+        "rule": "em-dash-overuse",
+        "value": "*",
+        "files": [
+          "dist/space.html"
+        ],
+        "createdAt": "2026-10-24T07:49:12.248Z",
+        "reason": "agent: the dashes are CSS custom property names (--ds-*), not prose em-dashes"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "inter",
+        "files": [
+          ".impeccable/mocks/decision/canon.html"
+        ],
+        "createdAt": "2026-10-24T08:02:35.275Z",
+        "reason": "agent: canon decision sketch deliberately depicts the category-standard look (Inter); not shipped"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#000",
+        "files": [
+          "src/css/deck.css"
+        ],
+        "createdAt": "2026-10-24T08:52:09.032Z",
+        "reason": "agent: pure black letterbox behind slides while presenting, deliberate"
+      },
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          "dist/deck.html"
+        ],
+        "createdAt": "2026-10-24T08:52:09.062Z",
+        "reason": "agent: speaker notes render below the slide on page paper (measured against the inked slide); the image slide is the section rail drawn from real data"
+      },
+      {
+        "rule": "gray-on-color",
+        "value": "*",
+        "files": [
+          "dist/deck.html"
+        ],
+        "createdAt": "2026-10-24T08:52:09.095Z",
+        "reason": "agent: speaker notes render below the slide on page paper (measured against the inked slide); the image slide is the section rail drawn from real data"
+      },
+      {
+        "rule": "shape-assembled-illustration",
+        "value": "*",
+        "files": [
+          "dist/deck.html"
+        ],
+        "createdAt": "2026-10-24T08:52:09.120Z",
+        "reason": "agent: speaker notes render below the slide on page paper (measured against the inked slide); the image slide is the section rail drawn from real data"
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "src/templates/deck.html"
+        ],
+        "createdAt": "2026-10-24T08:52:44.450Z",
+        "reason": "agent: sizes come from deck.css in cqi units (title 10cqi vs text 2.6cqi); the raw template is read without that stylesheet"
+      }
+    ]
+  }
+}

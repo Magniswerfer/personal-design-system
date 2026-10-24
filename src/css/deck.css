@@ -1,0 +1,163 @@
+/* Decks: slide layouts and presenting. Load after ds.css, with deck.js.
+   Every size is in container units (cqi), so a slide looks the same as a
+   thumbnail, on a projector and in a PDF. */
+
+.ds-deck { display: grid; gap: var(--ds-space-7); padding: var(--ds-space-7) var(--ds-grid-margin); max-width: 72rem; margin-inline: auto; }
+
+/* ---- Shared slide anatomy (extends .ds-slide in ds.css) ---- */
+.ds-slide { position: relative; font-family: var(--ds-font-grotesk); }
+.ds-slide__head { font-size: max(0.625rem, 1.5cqi); font-weight: var(--ds-weight-medium); }
+.ds-slide__foot { font-size: max(0.5625rem, 1.25cqi); }
+.ds-slide__body { display: grid; align-content: end; gap: 2cqi; }
+.ds-slide__title { text-wrap: balance; }
+.ds-slide__notes { display: none; }
+
+/* Title: the deck's cover. An inked field, the title at full weight. */
+.ds-slide[data-layout="title"] .ds-slide__title { font-size: 10cqi; line-height: 0.86; letter-spacing: -0.04em; max-width: 14ch; }
+.ds-slide[data-layout="title"] .ds-slide__text { font-family: var(--ds-font-grotesk); font-size: 2.6cqi; max-width: 32ch; }
+
+/* Section: one monumental word, nothing else. */
+.ds-slide[data-layout="section"] .ds-slide__title { font-size: 17cqi; line-height: 0.82; letter-spacing: -0.045em; margin-left: -0.05em; }
+
+/* Statement: one sentence that carries the slide. */
+.ds-slide[data-layout="statement"] .ds-slide__body { align-content: center; }
+.ds-slide[data-layout="statement"] .ds-slide__title { font-size: 6.4cqi; font-weight: var(--ds-weight-medium); line-height: 1.02; letter-spacing: -0.03em; max-width: 18ch; }
+
+/* List: a title and up to four ruled items. */
+.ds-slide[data-layout="list"] .ds-slide__title,
+.ds-slide[data-layout="split"] .ds-slide__title,
+.ds-slide[data-layout="stats"] .ds-slide__title,
+.ds-slide[data-layout="code"] .ds-slide__title { font-size: 4.6cqi; font-weight: var(--ds-weight-medium); line-height: 1; letter-spacing: -0.03em; }
+.ds-slide__list { list-style: none; padding: 0; counter-reset: ds-item; display: grid; border-top: 0.25cqi solid currentColor; }
+.ds-slide__list li {
+  counter-increment: ds-item;
+  display: grid;
+  grid-template-columns: 6cqi 1fr;
+  padding: 1.4cqi 0;
+  border-bottom: 0.1cqi solid color-mix(in srgb, currentColor 30%, transparent);
+  font-size: 2.6cqi;
+  line-height: 1.25;
+}
+.ds-slide__list li::before { content: counter(ds-item); font-family: var(--ds-font-mono); font-size: 1.6cqi; padding-top: 0.5cqi; }
+.ds-slide[data-layout="list"] .ds-slide__body { grid-template-columns: 5fr 7fr; align-items: end; column-gap: 4cqi; }
+
+/* Split: words left, figure right. */
+.ds-slide[data-layout="split"] .ds-slide__body { grid-template-columns: 5fr 7fr; column-gap: 4cqi; align-items: end; height: 100%; padding-top: 2cqi; }
+.ds-slide[data-layout="split"] .ds-slide__text { font-size: 2.2cqi; }
+.ds-slide__figure { margin: 0; align-self: stretch; display: grid; grid-template-rows: 1fr auto; min-height: 0; background: var(--ds-paper-sunken); }
+.ds-slide__figure img, .ds-slide__figure svg { width: 100%; height: 100%; object-fit: cover; min-height: 0; }
+.ds-slide__figure figcaption { font-size: max(0.5625rem, 1.2cqi); padding: 0.8cqi 1cqi; border-top: 0.1cqi solid var(--ds-rule-soft); color: var(--ds-ink-muted); }
+
+/* Stats: three figures with labels. */
+.ds-slide__stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3cqi; }
+.ds-slide__stats > div { border-top: 0.25cqi solid currentColor; padding-top: 1cqi; display: grid; gap: 0.4cqi; }
+.ds-slide__stats b { font-size: 8cqi; font-weight: var(--ds-weight-medium); line-height: 1; letter-spacing: -0.03em; font-variant-numeric: tabular-nums lining-nums; }
+.ds-slide__stats span { font-size: 1.7cqi; }
+
+/* Quote: the serif speaks, the grotesk attributes. */
+.ds-slide[data-layout="quote"] .ds-slide__body { align-content: center; }
+.ds-slide__quote { font-family: var(--ds-font-serif); font-size: 4.6cqi; line-height: 1.18; max-width: 26ch; text-wrap: balance; }
+.ds-slide__quote::before { content: "“"; margin-left: -0.45em; }
+.ds-slide__quote::after { content: "”"; }
+.ds-slide__cite { font-size: 1.8cqi; font-style: normal; }
+
+/* Code: one block, large enough to read from the back. */
+.ds-slide__code { margin: 0; background: var(--ds-paper-sunken); color: var(--ds-ink); border-top: 0.15cqi solid var(--ds-rule-strong); padding: 2cqi; font-size: 1.75cqi; line-height: 1.5; overflow: hidden; white-space: pre; }
+
+/* Image: a full-bleed picture with a caption bar. */
+.ds-slide[data-layout="image"] { grid-template-rows: 1fr auto; }
+.ds-slide[data-layout="image"] > img, .ds-slide[data-layout="image"] > .ds-slide__art { grid-row: 1; width: 100%; height: 100%; object-fit: cover; min-height: 0; }
+.ds-slide[data-layout="image"] .ds-slide__foot { padding-top: 1.5cqi; }
+
+/* End: an inked close. */
+.ds-slide[data-layout="end"] .ds-slide__title { font-size: 13cqi; line-height: 0.86; letter-spacing: -0.045em; }
+.ds-slide[data-layout="end"] .ds-slide__text { font-family: var(--ds-font-mono); font-size: 1.8cqi; }
+
+/* On an inked slide the figure and code wells stay paper. */
+.ds-slide[data-ink] .ds-slide__figure, .ds-slide[data-ink] .ds-slide__code { color: var(--ds-ink); }
+
+/* Notes read under each slide in the document view, never on screen while presenting. */
+.ds-deck .ds-slide__notes {
+  display: block;
+  position: absolute;
+  top: calc(100% + var(--ds-space-3));
+  left: 0;
+  right: 0;
+  font-family: var(--ds-font-serif);
+  font-size: var(--ds-text-small);
+  color: var(--ds-ink-muted);
+}
+.ds-deck > .ds-slide:has(.ds-slide__notes) { margin-bottom: var(--ds-space-6); overflow: visible; }
+
+/* ---- Toolbar (document view) ---- */
+.ds-deck-bar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--ds-space-3);
+  padding: var(--ds-space-3) var(--ds-grid-margin);
+  background: var(--ds-paper);
+  border-bottom: var(--ds-border-hairline) solid var(--ds-rule-strong);
+}
+.ds-deck-bar__title { font-weight: var(--ds-weight-bold); margin-right: auto; }
+.ds-deck-bar__keys { font-family: var(--ds-font-mono); font-size: var(--ds-text-small); color: var(--ds-ink-muted); }
+@media (max-width: 40rem) { .ds-deck-bar__keys { display: none; } }
+
+/* ---- Presenting ---- */
+html.ds-presenting, html.ds-presenting body { overflow: hidden; background: #000; }
+html.ds-presenting .ds-deck-bar { display: none; }
+html.ds-presenting .ds-deck {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  max-width: none;
+  background: #000;
+  cursor: none;
+}
+html.ds-presenting .ds-deck > .ds-slide {
+  grid-area: 1 / 1;
+  width: min(100vw, 100vh * 16 / 9);
+  border: 0;
+  margin: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+html.ds-presenting .ds-deck > .ds-slide[aria-current="true"] { visibility: visible; }
+html.ds-presenting .ds-slide__notes { display: none; }
+@media (prefers-reduced-motion: no-preference) {
+  html.ds-presenting .ds-deck > .ds-slide[aria-current="true"] { animation: ds-slide-in var(--ds-duration-standard) var(--ds-ease-out); }
+}
+@keyframes ds-slide-in { from { opacity: 0.6; } to { opacity: 1; } }
+
+/* ---- Print / PDF: one 16:9 page per slide ---- */
+@media print {
+  @page { size: 338.67mm 190.5mm; margin: 0; }
+  html, body { background: none; }
+  .ds-deck-bar { display: none; }
+  .ds-deck { display: block; padding: 0; max-width: none; }
+  .ds-deck > .ds-slide {
+    width: 338.67mm;
+    height: 190.5mm;
+    border: 0;
+    margin: 0;
+    break-after: page;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+  .ds-slide__notes { display: none !important; }
+}
+
+/* ---- Speaker view (rendered by deck.js into its own window) ---- */
+.ds-speaker { display: grid; grid-template-columns: 3fr 2fr; grid-template-rows: auto 1fr; gap: var(--ds-space-5); height: 100vh; padding: var(--ds-space-5); }
+.ds-speaker__bar { grid-column: 1 / -1; display: flex; gap: var(--ds-space-5); align-items: baseline; border-bottom: var(--ds-border-rule) solid var(--ds-rule-strong); padding-bottom: var(--ds-space-3); }
+.ds-speaker__count { font-size: var(--ds-text-h2); font-weight: var(--ds-weight-bold); }
+.ds-speaker__timer { font-family: var(--ds-font-mono); font-size: var(--ds-text-h2); margin-left: auto; font-variant-numeric: tabular-nums; }
+.ds-speaker__now .ds-slide, .ds-speaker__next .ds-slide { width: 100%; visibility: visible; }
+.ds-speaker__side { display: grid; grid-template-rows: auto 1fr; gap: var(--ds-space-5); min-height: 0; }
+.ds-speaker__notes { font-family: var(--ds-font-serif); font-size: var(--ds-text-lead); line-height: 1.5; overflow-y: auto; }
+.ds-speaker__notes:empty::before { content: "No notes for this slide."; color: var(--ds-ink-faint); }
